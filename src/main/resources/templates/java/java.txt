@@ -1,0 +1,12 @@
+정처기 관련 자바 문제
+
+1. 다음 Java 코드에서 밑줄로 표시된 부분에는 어떤 보안 약점이 존재하는가?
+
+public String  encryiptString(String usr){
+Stromg key = "22df30321sf-2:ans!@#>as"; //아무런 관련 없는 코드.
+
+if(key!=null){
+byte[] btpEncrypt = usr.getBytes("UTF-8");
+}
+
+답: 하드 코드된 암호화 키 사용
