@@ -27,6 +27,7 @@ DTO는 데이터 전송을 위해 사용되는 데이터 컨테이너로 볼 수
 
 ### DTO클래스의 예
 
+```
 import lombok.Getter;
 import lombok.Setter;
 
@@ -37,9 +38,12 @@ private String name;
 private String email;
 }
 
-
+```
+```
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+
 
 @RestController
 public class MemberController {
@@ -51,6 +55,10 @@ memberDTO.setEmail("john@example.com");
 return memberDTO;
 }
 }
+```
+
+
+
 @GetMapping 어노테이션을 사용하여 GET 요청을 처리하는 getMember() 메서드를 구현하였습니다.
 
 getMember() 메서드에서는 MemberDTO 객체를 생성하고, 이름과 이메일 값을 설정한 후에 해당 객체를 반환합니다. 이렇게 하면 /member 엔드포인트로 GET 요청을 보낼 때 MemberDTO 객체가 JSON 형식으로 반환됩니다.
