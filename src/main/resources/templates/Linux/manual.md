@@ -34,3 +34,20 @@ number같은 경우 1,2,3 번호를 적어주면 된다.
     man cp [OPTION]... SOURCE DEST
 위 명령어를 통해서도 어떤 내용이 필요한지 발견할 수 있다.\
 옵션, 문자열, 저장 경로 등..
+
+### 매뉴얼 7가지 섹션
+
+매뉴얼에는 괄호 양 옆 넘버가 있는데 그 넘버에도 종류가 있음
+1.   General Commands Manual
+2.   System Calls Manual
+3.   Library Functions Manual
+4.   Kernel Interfaces Manual
+5.   File Formats Manual
+6.   Games Manual
+7.   Miscellaneous Information Manual
+8.   System Manager's Manual
+9.   Kernel Developer's Manual
+
+가장 많이 쓰이는건 1번이다.
+
+ * TIP) man에 나오지 않는 명령어 경우 ex) cd,pwd는 help명령어 사
