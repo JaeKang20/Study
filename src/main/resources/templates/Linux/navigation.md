@@ -67,6 +67,9 @@ cd를 통해 파일 안쪽 끝까지 들어가다 보면
 
 위와 같이 활용.
 
+파일 개수 확인
 
+    ls | wc -l
+ls로 현재 파일 확인 출력 결과 wc -l 명령어로 체크
 
 [실습은 여기서](https://plum-poppy-0ea.notion.site/Navigation-Exercise-cfabfffd1fc04c22a76b6e3ebb60a4ca)
