@@ -8,7 +8,7 @@
 
 다른 노드에 앱 복제본이 실행되며, 이 복제본도 서비스에 연결됩니다.
 
-<img src="../../../static/img/img_7.png" alt="복제본" width="40%">\
+<img src="../../../static/img/img_7.png" alt="복제본" width="60%">
 
 이전에 설명처럼 IP주소를 사용하고 로드밸런싱 역할을 합니다.( 현재 가장 바쁘지 않은 파드로 전달)
 
@@ -16,7 +16,7 @@
 
 그리고 이 블루프린트를 <h3>Deployment</h3>라고 부릅니다.
 
-<img src="../../../static/img/img_8.png" alt="Deployment" width="40%">\
+<img src="../../../static/img/img_8.png" alt="Deployment" width="60%">
 
 실제로 두 번째 파드를 생성하는 대신 배포를 생성하고 관리할 것입니다.
 배포를 통해 몇 개의 복제본을 실행할지 지정하고 필요에 따라 스케일을 조정할 수 있습니다.
