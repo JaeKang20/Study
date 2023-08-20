@@ -1,4 +1,4 @@
-## ConfigMap & Secret
+## ConfigMap & Secret_external configuration
 
 ### ConfigMap 필요성
 
@@ -7,7 +7,7 @@
 
 그러나 DB URL이 변경된다면 이를 조정해야 합니다.
 
-보통 새로운 앱을 빌드하고 배포하면 새 이미지를 팟 내로 가져와 전체 시스템을 새로 다시 시작해야합니다.
+보통 새로운 앱을 빌드하고 배포하면 새 이미지를 팟 내로 가져와 전체 시스템을 새로 다시 시작해야합니다.\
 <img src="../../../static/img/img_6.png" alt="쿠버네티스 내부서비스의 URL" width="40%">\
 이와 같은 경우를 위해 쿠버네티스에서 **'ConfigMap'** 을 사용합니다.
 

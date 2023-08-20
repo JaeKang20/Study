@@ -1,4 +1,4 @@
-## Deployment & Stateful Set
+## Deployment & Stateful Set_replication
 
 ### 장애 대응
 만약 앱의 팟이 다운되거나 죽은 경우 사용자는 앱에 접근할 수 없습니다.
@@ -29,3 +29,35 @@
 App은 복제가 가능하지만 DB는 복제가 안됩니다.
 
 ### 데이터베이스와 StatefulSet
+그 이유는 데이터베이스는 상태를 가지고 있기 때문입니다.
+
+    헷갈린다면 자바에서 클래스안에 멤버변수 생각.
+
+다시말해 데이터베이스의 클론이 있다면 모두 동일한 공유 데이터 저장소에 접근해야 하며 이를 위해서
+현재 어떤 부분이 해당 저장소에서 쓰고 있는지 읽고 관리하는지 매커니즘이필요합니다.
+<img src="../../../static/img/img_11.png" alt="Deployment" width="80%">
+
+이 메커니즘을 레플리케이션(복사) 기능과 함께 쿠버네티스 컴포넌트인 **StatefulSet**에서 제공됩니다.
+
+MySQL,MongoDB,ElasticSearch와 같은 상태를 유지하는 DB경우, StatefulSet을 사용해야합니다.\
+<img src="../../../static/img/img_12.png" alt="Deployment" width="50%">\
+Deployment와 같이 팟을 복제하고 스케일업 스케일 다운을 처리합니다. 
+* 주요 차이점은 DB 읽기와 쓰기가 동기화 되도록 관리한다는 점입니다. 그러면 DB가 불일치되는 일을 방지할 수 있습니다.
+
+* Stateless => Deployment
+* StatefullSet => Stateful Apps or Databases
+
+
+#### 알고 넘어가야 할 부분
+StatefulSet을 통해 데이터베이스를 배포하는것은 다소 복잡할 수 있습니다.
+
+    그래서 데이터베이스 애플리케이션을 쿠버네티스 클러스터 외부에 호스팅하고
+    deployments나 stateless Apps은 쿠버네티스 클러스터 내에서 문제 없이 복제 및 확장되며
+    외부 데이터베이스와 통신하게 하는 것이 일반적인 관행입니다.
+
+<img src="../../../static/img/img_13.png" alt="Deployment" width="50%">\
+
+두개의 노드(팟)로 두개의 앱, 두개의 DB가 존재하며 한쪽이 충돌이 생겨 서버 죽더라도
+나머지 하나에서 실행이 멈추지 않습니다.
+
+
