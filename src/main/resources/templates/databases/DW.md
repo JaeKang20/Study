@@ -13,3 +13,9 @@
 
 ### 로이드 케이에선... (lloydK)
 데이터 수집은 Apache Kafka
+
+ㆍ빅데이터 솔루션(Elasticsearch, Kafka 등) 구축 및 유지보수
+
+ㆍ빅데이터 분석 / 시각화
+
+ㆍ클라우드 솔루션(Vault, Terraform) 구축 및 유지보수
